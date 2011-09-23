@@ -1,0 +1,7 @@
+{
+"lo_freq_khz" : 3537840 ,
+"tx_gain_idx" : 0 ,
+"rx_gain_idx" : 64 ,
+"rx_path_bitmask" : 15 ,
+"cal_data" : 0
+}

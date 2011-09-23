@@ -1,0 +1,14 @@
+*.o
+*.swp
+install
+memrw/mem_rw
+rflib/librflib.a
+rftool/rftool
+python/rflib/_rfif.so
+python/rflib/librflib.a
+python/rflib/rfif.py
+python/rflib/rfif_wrap.c
+*_rfif.so
+*rflib_test
+*rfif.py
+python/rf-ctrl/__pycache__/
