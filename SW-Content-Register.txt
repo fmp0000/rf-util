@@ -1,0 +1,17 @@
+NXP Software Content Register-NXP LA9310 RF Utility
+
+Date Created:       	August-2024
+Name:			RF control software
+
+Description:		rf_util repository contains all the software components
+			required to support RF configuration and control functionality
+			for the IMx-LA9310 SDR platform. It includes rflib, python files
+			or scripts that are required, and any test code and config data
+			that might be required for basic test.
+Package:                     rf_util
+Outgoing License:            LA_OPT_Online Code Hosting NXP_Software_License - v1.3 December 2024
+License File:                LICENSE.txt
+Package Category:            user space
+Origin:			     NXP
+Type of Content:             source, header files, build files, scripts
+Release Location:           https://github.com/nxp-qoriq/rf_util

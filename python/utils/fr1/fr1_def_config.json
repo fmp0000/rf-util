@@ -1,7 +1,11 @@
 {
-"lo_freq_khz" : 3537840 ,
-"tx_gain_idx" : 0 ,
-"rx_gain_idx" : 64 ,
-"rx_path_bitmask" : 15 ,
-"cal_data" : 0
+"lo_freq_KHz" : 3500000 ,
+"rf_cal_file_path" : "/home/root/rf_ctrl/utils/fr1/mt3812_rf_cal.bin" ,
+"path_tx" : 0 ,
+"path_rx1" : 1 ,
+"path_rx2" : 1 ,
+"tx_bw" : "50_MHz" ,
+"rx_bw" : "50_MHz" ,
+"tx_gain_db" : 30 ,
+"rx_gain_db" : 20
 }

@@ -1,5 +1,5 @@
-# Copyright 2021-2023 NXP
-# NXP Confidential. This software is owned or controlled by NXP and may only
+# Copyright 2021-2024 NXP
+# NXP Proprietary. This software is owned or controlled by NXP and may only
 # be used strictly in accordance with the applicable license terms. By expressly accepting
 # such terms or by downloading, installing, activating and/or otherwise using
 # the software, you are agreeing that you have read, and that you agree to
@@ -10,6 +10,7 @@
 CONFIG_DIRS := fr1
 FR1_FILES := ${PWD}/python/fr1/fr1.py
 UTILS_FR1_FILES := ${PWD}/python/utils/fr1/fr1_def_config.json 
+UTILS_SHELL_SCRIPTS := ${PWD}/scripts/enable_rf.sh
 
 all: ${CONFIG_DIRS}
 	$(foreach b, $(CONFIG_DIRS), ${MAKE} -C ${b}  all;)
@@ -19,10 +20,10 @@ clean: ${CONFIG_DIRS}
 
 install: ${CONFIG_DIRS}
 	$(foreach b, $(CONFIG_DIRS), ${MAKE} -C ${b}  install;)
-ifeq ($(ENABLE_ICWINGS),1)
+ifeq ($(MT3812),1)
 	cp $(FR1_FILES) $(RFCTRL_FR1_DIR)/
-	cp $(UTILS_FR1_FILES) $(RFCTRL_FR1_DIR)/
-
+	cp $(UTILS_FR1_FILES) $(RFCTRL_UTILS_FR1_DIR)/
+	cp $(UTILS_SHELL_SCRIPTS) $(RFCTRL_UTILS_SCRIPTS_DIR)/
 else
-	rm -rf $(RFCTRL_FR1_DIR)/ $(RFCTRL_UTILS_FR1_DIR)/
+	rm -rf $(RFCTRL_FR1_DIR) $(RFCTRL_UTILS_FR1_DIR) $(RFCTRL_UTILS_SCRIPTS_DIR)
 endif
